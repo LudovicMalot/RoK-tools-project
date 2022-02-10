@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- feuille de styles du site-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!--feuilles de script du site-->
+    <script src="../assets/js/app.js"></script>
+
+    <title>Rise of Kingdoms Tools</title>
+</head>
+
+<body>
+
+    <nav>
+        <!-- ouvre le menu vertical -->
+        <div id="navG">
+            <!--texte afficher sur écran large-->
+            <div id="menuGE" onclick="openNav()">
+                &#9776 选单
+            </div>
+            <!--texte afficher sur écran téléphone-->
+            <div id="menuSE" onclick="openNav()">
+                &#9776
+            </div>
+        </div>
+        <!--logo -->
+        <div id="navM">
+            <a href="../l_chinois/index_zh.html">
+                <img src="../assets/icon/logo.png" alt="" id="logo">
+            </a>
+        </div>
+        <!--gére les langues et les utilisateurs-->
+        <div id="navD">
+            <div class="nav_vide"></div>
+            <div class="langue">
+                <div id="current_langue_selected" onclick="openLangue()" onmouseover="openLangue()"
+                    onmouseout="setTimeout(closeLangue(),500)">
+                    <div class="chinois langue_2">
+                        <div class="flag"></div>
+                        <div class="f_text">简体中文</div>
+                        <div class="fleche_bas">▼</div>
+                    </div>
+                </div>
+                <div id="non_selected_langue" onmouseover="openLangue()" onmouseout="setTimeout(closeLangue(),500)">
+                    <a href="../index.html">
+                        <div class="francais langue_2 langue_selector">
+                            <div class="flag"></div>
+                            <div class="f_text">Français</div>
+                            <div class="fleche_bas">▼</div>
+                        </div>
+                    </a>
+                    <a href="../l_anglais/index_en.html">
+                        <div class="anglais langue_2 langue_selector">
+                            <div class="flag"></div>
+                            <div class="f_text">English</div>
+                            <div class="fleche_bas">▼</div>
+                        </div>
+                    </a>
+                    <a href="../l_chinois/index_zh.html">
+                        <div class="chinois langue_2 langue_selector">
+                            <div class="flag"></div>
+                            <div class="f_text">简体中文</div>
+                            <div class="fleche_bas">▼</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="nav_users">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="users_iconbox">
+                    <a href="#"></a>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!--<div class="users_icon"></div>-->
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- sous-menu -->
+    <div class="main_pages">
+        <ul id="Menu" class="Menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();closeAllMenu()">&times;</a>
+            <a href="#">活动日历</a>
+            <li class="deroulant"> <a onclick="handleMenu1()">计算计</a>
+                <ul id="sousmenu1" class="sousmenu">
+                    <li><a href="#">资源</a></li>
+                    <li><a href="#">加速</a></li>
+                    <li><a href="#">建造</a></li>
+                    <li><a href="#">训练</a></li>
+                    <li><a href="#">医院</a></li>
+                    <li><a href="#">技术</a></li>
+                    <li><a href="#">MGE点</a></li>
+                    <li><a href="#">VIP</a></li>
+                    <li><a href="#">材料</a></li>
+                </ul>
+            </li>
+            <li class="deroulant"> <a onclick="handleMenu2()">数据库</a></li>
+            <ul id="sousmenu2" class="sousmenu">
+                <li><a href="#">建造</a></li>
+                <li><a href="#">技术</a></li>
+                <li><a href="#">训练</a></li>
+                <li><a href="#">在应用程序内购买</a></li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">设备</a></li>
+                <li><a href="#">护照</a></li>
+            </ul>
+            <li class="deroulant"> <a onclick="handleMenu3()">指挥官</a></li>
+            <ul id="sousmenu3" class="sousmenu">
+                <li><a href="#">传奇的</a></li>
+                <li><a href="#">史诗</a></li>
+                <li><a href="#">精英</a></li>
+                <li><a href="#">先进</a></li>
+                <li><a href="#">分类和二项式</a></li>
+            </ul>
+            <a href="#">指南和提示</a>
+            <a href="#">关于</a>
+        </ul>
+    </div>
+
+    <!--section d'acceuil première partie afficher sur la page-->
+    <section id="acceuil" onclick="closeLangue()">
+        <div class="log_ac">
+            <div class="corps_intro">
+                <h1 class="gros_titre">欢迎</h1>
+                <p class="texte_intro">关于 RoK 卓越指南</p>
+                <p class="texte_bouton">发现功能</p>
+                <div class="center-con">
+                    <a href="#fonctionnalité">
+                        <div class="round">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section pour une grille de fonctionnalités-->
+    <section id="fonctionnalité" onclick="closeLangue()">
+        <div class="wrapper">
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 1</div>
+                    </div>
+                </a>
+            </div>
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 2</div>
+                    </div>
+                </a>
+            </div>
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 3</div>
+                    </div>
+                </a>
+            </div>
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 4</div>
+                    </div>
+                </a>
+            </div>
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 5</div>
+                    </div>
+                </a>
+            </div>
+            <div class="f_box">
+                <a href="#">
+                    <div class="f_appercu">
+                        <div class="haut"></div>
+                        <div class="bas">Fonctionnalité 6</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
